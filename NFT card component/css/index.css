@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root
+{
+    --main-bg-color:hsl(217, 54%, 11%);
+    --main-card-bg-color:hsl(216, 50%, 16%);
+    --horizontal-line-color:hsl(215, 32%, 27%);
+
+    --hover-effect-color:hsl(178, 100%, 50%);
+
+    --text-color-before-hover:hsl(0, 0%, 100%);
+
+    --secondary--text-color:hsl(215, 51%, 70%);
+
+}
+*
+{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "OUTFIT",sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+    line-height: 1.5;
+}
+.container
+{
+    display: grid;
+    width: 300px;
+    padding:  15px;
+    background-color: var(--main-card-bg-color);
+    border: none;
+    border-radius: 12px;
+}
+.container-equilibriumImage
+{
+    width: 100%;
+    position: relative;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    
+}
+#image-equilibrium
+{
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+}
+.eye-overlay
+{
+    position:absolute;
+    overflow: hidden;
+    opacity: 0;
+    background-color: var(--hover-effect-color);
+    inset: 0; /* top right bottom left */
+    border: none;
+    border-radius: 12px;
+    
+}
+.container-equilibriumImage:hover .eye-overlay 
+{
+    opacity:.6;
+    cursor: pointer;
+}
+#icon-view
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+.container-description
+{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.container-description h3{
+    color: var(--text-color-before-hover);
+    font-family: "OUTFIT",sans-serif;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+h3:hover
+{
+    color: var(--hover-effect-color);
+    cursor: pointer;
+}
+.container-description p{
+    color: var(--secondary--text-color);
+    font-family: "OUTFIT",sans-serif;
+    font-weight: 300;
+}
+.container-details
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+.container-details_ethereum
+{
+ display: flex;
+ align-items: center;
+}
+.container-details_ethereum p{
+  margin-left: 5px;
+  color: var(--hover-effect-color);
+}
+.container-details_clock
+{
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+}
+.container-details_clock p{
+    color: var(--secondary--text-color);
+    margin-left: 5px;
+}
+.container---avatar
+{
+    display: flex;
+    width: 100%;
+    font-weight: 200;
+    border-top: 2px solid var(--horizontal-line-color);
+    padding-top: 10px; 
+}
+.container---avatar img
+{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--text-color-before-hover);
+    border-radius: 50%;
+}
+.container---avatar p{
+    color: var(--secondary--text-color);
+    margin-left: 15px;
+    font-weight: 200;
+}
+.container---avatar span
+{
+    color: var(--text-color-before-hover);
+}
+.container---avatar span:hover
+{
+    color: var(--hover-effect-color);
+    cursor: pointer;
+}
